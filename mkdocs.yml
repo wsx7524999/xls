@@ -69,6 +69,7 @@ nav:
   - Development:
     - Contributing: 'contributing.md'
     - Style Guide: 'xls_style.md'
+    - Repository Metadata: 'metadata.md'
     - Adding a new IR operation: 'adding_ir_operation.md'
     - Ideas and Projects: 'ideas_and_projects.md'
     - FPGA characterization (experimental): 'fpga_characterization.md'

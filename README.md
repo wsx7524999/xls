@@ -210,6 +210,14 @@ bazel run //:refresh_compile_commands
 See the comments in the top-level
 [BUILD](https://github.com/google/xls/blob/main/BUILD) file for more details.
 
+## Repository Metadata
+
+For structured information about this project, see the [`METADATA.json`](METADATA.json) 
+file in the repository root. This machine-readable file contains comprehensive 
+details about the project including technology stack, features, dependencies, and 
+community resources. Full documentation is available in the 
+[metadata documentation](https://google.github.io/xls/metadata/).
+
 ## Stack Diagram and Project Layout
 
 Navigating a new code base can be daunting; the following description provides a

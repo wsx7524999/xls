@@ -1,0 +1,179 @@
+{
+  "project": {
+    "name": "XLS",
+    "full_name": "XLS: Accelerated HW Synthesis",
+    "description": "XLS implements a High Level Synthesis toolchain that produces synthesizable designs (Verilog and SystemVerilog) from flexible, high-level descriptions of functionality. It is a Mid-Level Synthesis toolchain for hardware development that aims to improve development velocity, quality, reliability, and security.",
+    "version": "0.0.1",
+    "status": "experimental",
+    "keywords": [
+      "hardware-synthesis",
+      "high-level-synthesis",
+      "verilog",
+      "systemverilog",
+      "FPGA",
+      "ASIC",
+      "hardware-design",
+      "compiler",
+      "toolchain",
+      "EDA"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/google/xls",
+    "fork_url": "https://github.com/wsx7524999/xls",
+    "upstream": "https://github.com/google/xls.git",
+    "issues": "https://github.com/google/xls/issues",
+    "discussions": "https://github.com/google/xls/discussions"
+  },
+  "license": {
+    "type": "Apache-2.0",
+    "url": "https://github.com/google/xls/blob/main/LICENSE",
+    "description": "Apache License 2.0"
+  },
+  "documentation": {
+    "homepage": "https://google.github.io/xls/",
+    "quick_start": "https://google.github.io/xls/tools_quick_start/",
+    "tutorials": "https://google.github.io/xls/tutorials/",
+    "api_reference": "https://google.github.io/xls/dslx_reference.md",
+    "contributing": "https://google.github.io/xls/contributing/",
+    "style_guide": "https://google.github.io/xls/style_guide",
+    "colab_notebooks": {
+      "learn_xls": "https://bit.ly/learn-xls",
+      "playground": "https://bit.ly/xls-playground"
+    }
+  },
+  "technology_stack": {
+    "primary_languages": [
+      "C++",
+      "Python",
+      "DSLX"
+    ],
+    "build_system": "Bazel",
+    "build_tool": "bazelisk",
+    "bazel_version": "7.x",
+    "python_version": "3.12",
+    "llvm_version": "19.1.7",
+    "frontend_languages": [
+      "DSLX",
+      "C++ (via XLS[cc])"
+    ],
+    "output_formats": [
+      "Verilog",
+      "SystemVerilog",
+      "XLS IR"
+    ],
+    "key_dependencies": [
+      "Abseil",
+      "LLVM",
+      "Z3",
+      "iverilog",
+      "Yosys",
+      "OpenROAD"
+    ]
+  },
+  "features": {
+    "core_capabilities": [
+      "High-level to hardware synthesis",
+      "DSLX domain-specific language",
+      "Intermediate Representation (IR) optimization",
+      "Pipeline generation",
+      "Verilog/SystemVerilog code generation",
+      "Native JIT execution",
+      "Formal verification support",
+      "Hardware fuzzing",
+      "Delay modeling and estimation"
+    ],
+    "supported_platforms": [
+      "Linux (Ubuntu 22.04+)",
+      "Docker"
+    ],
+    "experimental_features": [
+      "C++ frontend (XLS[cc])",
+      "FPGA characterization",
+      "Network-on-Chip (NoC) support"
+    ]
+  },
+  "project_structure": {
+    "main_components": {
+      "dslx": "Domain-specific language frontend (Rust-inspired)",
+      "ir": "Intermediate representation and optimization",
+      "codegen": "Verilog/SystemVerilog code generation",
+      "jit": "LLVM-based just-in-time compiler",
+      "interpreter": "IR interpreter for debugging",
+      "passes": "Optimization passes",
+      "scheduling": "Pipeline scheduling algorithms",
+      "simulation": "Verilog simulation wrappers",
+      "solvers": "SMT solver integration (Z3)",
+      "synthesis": "Backend synthesis flow integration",
+      "fuzzer": "Whole-stack multiprocess fuzzer",
+      "tools": "Command-line tools",
+      "examples": "Example designs",
+      "modules": "Reusable hardware building blocks"
+    },
+    "documentation_source": "docs_src",
+    "documentation_output": "docs",
+    "build_files": "BUILD",
+    "module_definition": "MODULE.bazel"
+  },
+  "community": {
+    "communication_channels": {
+      "discussions": "https://github.com/google/xls/discussions",
+      "mailing_list": "https://groups.google.com/g/xls-dev"
+    },
+    "guidelines": "https://opensource.google/conduct/",
+    "cla_required": true,
+    "cla_url": "https://cla.developers.google.com/"
+  },
+  "development": {
+    "style_guides": {
+      "cpp": "https://google.github.io/styleguide/cppguide.html",
+      "python": "https://google.github.io/styleguide/pyguide.html",
+      "shell": "https://google.github.io/styleguide/shellguide.html",
+      "xls_specific": "https://google.github.io/xls/xls_style/"
+    },
+    "ci": {
+      "platform": "GitHub Actions",
+      "workflows": [
+        "Continuous Integration",
+        "Nightly Ubuntu 22.04"
+      ]
+    },
+    "code_review_process": "GitHub Pull Requests",
+    "commit_style": "Squashed commits preferred"
+  },
+  "distribution": {
+    "binary_releases": {
+      "platform": "x64 Linux",
+      "format": "tar.gz",
+      "location": "https://github.com/google/xls/releases"
+    },
+    "conda_packages": {
+      "channel": "litex-hub",
+      "url": "https://anaconda.org/litex-hub/xls"
+    },
+    "docker_images": [
+      "Dockerfile-ubuntu-22.04"
+    ]
+  },
+  "related_projects": {
+    "upstream": "https://github.com/google/xls",
+    "visualization_tools": "IR visualization and Cytoscape integration",
+    "simulators": "iverilog for Verilog simulation",
+    "synthesis_backends": [
+      "Yosys (open-source)",
+      "OpenROAD (place-and-route)"
+    ],
+    "pdks": [
+      "ASAP7",
+      "SKY130"
+    ]
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "generated": "2025-12-25",
+    "format": "JSON",
+    "schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "This metadata file provides structured information about the XLS (Accelerated Hardware Synthesis) repository, including project details, technology stack, features, and community information."
+  }
+}
